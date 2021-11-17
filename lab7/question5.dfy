@@ -1,5 +1,5 @@
 method M1(x: int, y: int) returns (r: int)
-ensures r == 0
+ensures r == x*y
 decreases x < 0, x
 {
     if (x == 0){
@@ -14,7 +14,7 @@ decreases x < 0, x
 }
 
 method A1(x: int, y: int) returns (r: int)
-// ensures r == ?
+ensures r == x + y
 {
     r:= x;
     if( y < 0){
@@ -33,7 +33,7 @@ method A1(x: int, y: int) returns (r: int)
         invariant n >= 0
         {
             r:= r + 1;
-            n:= n + 1;
+            n:= n - 1;
         }
     }
 }
