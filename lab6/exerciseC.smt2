@@ -1,0 +1,10 @@
+;Question 1
+(declare-fun mf () Int)
+(declare-fun ff () Int)
+(declare-fun ss () Int)
+(declare-fun hw () Int)
+(declare-fun ms () Int)
+(declare-fun sp () Int)
+(assert (= (+ (* mf 215) (* ff 235) (* ss 335) (* hw 355) (* ms 420) (* sp 580) ) 1505))
+(check-sat)
+(get-model)
